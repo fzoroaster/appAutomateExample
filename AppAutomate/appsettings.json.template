@@ -1,0 +1,8 @@
+{
+  "AppSettings": {
+    "Browserstack": {
+      "User": "",
+      "Key": ""
+    }
+  }
+}

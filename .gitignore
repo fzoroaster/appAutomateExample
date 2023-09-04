@@ -1,0 +1,7 @@
+/AppAutomate/obj/
+/AppAutomate/bin/
+/AppAutomate/appsettings.json
+/.idea
+/.vs
+/AppAutomate.sln.DotSettings.user
+/**/*.feature.cs
