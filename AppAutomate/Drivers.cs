@@ -1,16 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 
 namespace AppAutomate;
 
-[Binding]
-public class Hooks
+public class Drivers
 {
-    public static AndroidDriver? Driver;
-
-    private static AndroidDriver CreateLocalAndroidDriver()
+    public static AndroidDriver CreateLocalAndroidDriver()
     {
         var appSettings = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings");
         var bsConfig = appSettings.GetSection("Browserstack");
@@ -19,7 +16,6 @@ public class Hooks
         AppiumOptions appiumOptions = new()
         {
             DeviceName = bsEnvironment.GetSection("DeviceName").Value,
-            App = bsConfig.GetSection("App").Value,
             AutomationName = "UiAutomator2"
         };
 
@@ -33,7 +29,7 @@ public class Hooks
         return new AndroidDriver(new Uri(appSettings.GetSection("AppiumAddress").Value ?? string.Empty), appiumOptions, TimeSpan.FromSeconds(30));
     }
 
-    private static AndroidDriver? CreateBrowserStackAndroidDriver()
+    public static AndroidDriver? CreateBrowserStackAndroidDriver()
     {
         var bsConfig = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings").GetSection("Browserstack");
 

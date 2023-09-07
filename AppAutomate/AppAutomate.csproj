@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Appium.WebDriver" Version="5.0.0-beta04"/>
+        <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
         <PackageReference Include="NUnit" Version="3.13.3"/>
@@ -20,11 +21,10 @@
     <ItemGroup>
         <Using Include="TechTalk.SpecFlow"/>
     </ItemGroup>
-
-
-
     <ItemGroup>
-      <None Remove="appsettings.json" />
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

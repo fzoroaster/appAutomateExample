@@ -1,0 +1,23 @@
+{
+  "AppSettings": {
+    "Udid": "......",
+    "AppPackage": "com.xxx.xxx",
+    "AppActivity": "xxxxxxxxx.SplashScreenActivity",
+    "AppiumAddress": "http://localhost:4723",
+    "Browserstack": {
+      "User": "......",
+      "Key": "......",
+      "App": "bs://.....",
+      "Environment": {
+        "DeviceName": "Google Pixel 3",
+        "OsVersion": "9.0"
+      },
+      "Capabilities": {
+        "Project": "Project",
+        "Build": "1.0",
+        "Name": "Name",
+        "BrowserstackAcceptInsecureCerts": false
+      }
+    }
+  }
+}
